@@ -1,0 +1,241 @@
+:root {
+    --candsColor: #3691C8;
+    --whiteBG: #fdfdfd;
+    --contrastColor: #545454;
+    --menuBG: #1a3845;
+}
+
+*
+{
+
+ font-family: 'Poppins', sans-serif;
+}
+
+
+::selection {
+    background: #00000096;
+    color: var(--whiteBG);
+
+}
+
+body {
+
+    background-color: var(--whiteBG);
+
+}
+
+.skip-nav-link {
+    background: var(--whiteBG);
+    color: var(--candsColor);
+    
+    
+}
+.nav-scrolled {
+  color: #333;
+  background-color: var(--whiteBG);
+  box-shadow: 0 3px 20px rgb(0 0 0 / 20%);
+    
+}
+
+.showcase {
+      background: #111;
+}
+
+.menu {
+    background-color: var(--menuBG);
+}
+
+.menu ul li a
+{
+    text-decoration: none;
+    color: var(--menuBG);
+    background: transparent; 
+    background: linear-gradient(to left, var(--whiteBG) 55%, transparent 45%) left;
+    background-size: 250%;
+    
+}
+
+.menu ul li a:hover,
+.menu ul li a:focus
+{
+
+border-right-color: var(--candsColor);
+color: var(--candsColor);
+
+
+}
+
+.switcher,
+[type="checkbox"]:checked + .app .switcher {
+    border-color: var(--candsColor);
+}
+
+
+.app .dark {
+    color: var(--whiteBG); 
+
+}
+
+.app .light{
+   color: var(--candsColor);
+}
+
+
+[type="checkbox"]:checked + .app .dark {
+    color: var(--candsColor);
+
+}
+
+[type="checkbox"]:checked + .app .light{
+    color: var(--whiteBG);
+}
+
+
+
+
+
+
+
+
+
+.overlay
+{
+
+  background: var(--candsColor);
+}
+
+.text h2,
+.text h3,
+.text p 
+{
+    color: var(--whiteBG);
+}
+
+.text p {
+    opacity: 0.8;
+}
+
+.text a,
+.inner-container a,
+.contact-form input[type="submit"]  
+{
+    background: var(--candsColor);
+    color: var(--whiteBG);
+    box-shadow: 0px 1px 0px 0px #005183bd;
+    
+    
+}
+
+.text a.reverse-color,
+.inner-container a.reverse-color {
+    background: var(--whiteBG);
+    color: var(--candsColor);
+}
+
+
+.low {
+    filter: grayscale(100%);
+    opacity: 0.85;
+
+    
+}
+
+.text a:hover,
+.inner-container a:hover,
+.contact-form input[type="submit"]:hover,
+.text a:focus,
+.inner-container a:focus,
+.contact-form input[type="submit"]:focus
+{
+    filter: brightness(110%);
+    opacity: 1;
+}
+
+.mid-section {
+    background:var(--candsColor);
+
+}
+
+.editorial.top {
+    fill: var(--candsColor);
+}
+
+.editorial.bottom {
+    fill: var(--whiteBG);
+}
+
+.about,
+.inner-container
+{
+
+    background-color: var(--whiteBG);
+  
+}
+
+.mytext{
+    color: var(--contrastColor);
+}
+
+.team 
+{
+
+}
+
+.arrow {
+    background-color: var(--candsColor);
+    color: var(--whiteBG);
+}
+
+
+
+.square-holder {
+  background-color:#f1f1f1;
+    border-color: #cecece;
+}
+
+.contact {
+    background-color: var(--candsColor);
+}
+
+.contact .container {
+    background-color: var(--whiteBG);
+}
+
+.contact .contact-info,
+.contact .contact-info .contact-option
+{
+border-color: #0000002e;
+}
+
+.contact .contact-info i {
+    color: var(--candsColor);
+    
+}
+
+.contact-info h4 {
+    color: var(--candsColor);
+
+}
+.contact-form h3 span {
+    color: var(--candsColor);
+
+}
+
+.contact-form input,
+.contact-form textarea
+{
+border-color: #0000002e;
+
+}
+
+footer {
+    background-color: var(--candsColor);
+}
+
+.footer__navegation li {
+    border-color: #fdfdfd38;
+} 
+
+footer .copyright {
+    color:var(--whiteBG);
+}
