@@ -2,7 +2,7 @@
     --candsColor: #3691C8;
     --whiteBG: #fdfdfd;
     --contrastColor: #545454;
-    --menuBG: #1a3845;
+
 }
 
 *
@@ -24,6 +24,15 @@ body {
 
 }
 
+.highlight {
+    color: var(--candsColor);
+}
+
+.showcase .highlight {
+
+    text-shadow: 1px 1px 1px black;
+}
+
 .skip-nav-link {
     background: var(--whiteBG);
     color: var(--candsColor);
@@ -42,16 +51,13 @@ body {
 }
 
 .menu {
-    background-color: var(--menuBG);
+    background: var(--whiteBG);
 }
 
 .menu ul li a
 {
     text-decoration: none;
     color: var(--menuBG);
-    background: transparent; 
-    background: linear-gradient(to left, var(--whiteBG) 55%, transparent 45%) left;
-    background-size: 250%;
     
 }
 
@@ -65,14 +71,19 @@ color: var(--candsColor);
 
 }
 
-.switcher,
+.switcher {
+  background-color: var(--whiteBG);
+  box-shadow: 0 3px 20px rgb(0 0 0 / 20%);
+  border-color: var(--candsColor);
+}
+
 [type="checkbox"]:checked + .app .switcher {
     border-color: var(--candsColor);
 }
 
 
 .app .dark {
-    color: var(--whiteBG); 
+    color: var(--contrastColor);
 
 }
 
@@ -87,7 +98,7 @@ color: var(--candsColor);
 }
 
 [type="checkbox"]:checked + .app .light{
-    color: var(--whiteBG);
+    color: var(--contrastColor);
 }
 
 
@@ -111,23 +122,40 @@ color: var(--candsColor);
     color: var(--whiteBG);
 }
 
+.text.reverse h2
+{
+    color: var(--candsColor);
+    text-shadow: 1px 1px 1px black;
+}
+
+
+.text.reverse h3
+{
+    color: var(--contrastColor);
+    text-shadow: 1px 1px 1px black;
+}
+
+
 .text p {
     opacity: 0.8;
 }
 
+.text.reverse p {
+    color: var(--contrastColor);
+}
+
+
 .text a,
-.inner-container a,
 .contact-form input[type="submit"]  
 {
-    background: var(--candsColor);
     color: var(--whiteBG);
+    background: var(--candsColor);
     box-shadow: 0px 1px 0px 0px #005183bd;
     
     
 }
 
-.text a.reverse-color,
-.inner-container a.reverse-color {
+.text a.reverse-color {
     background: var(--whiteBG);
     color: var(--candsColor);
 }
@@ -141,10 +169,8 @@ color: var(--candsColor);
 }
 
 .text a:hover,
-.inner-container a:hover,
 .contact-form input[type="submit"]:hover,
 .text a:focus,
-.inner-container a:focus,
 .contact-form input[type="submit"]:focus
 {
     filter: brightness(110%);
@@ -164,30 +190,32 @@ color: var(--candsColor);
     fill: var(--whiteBG);
 }
 
-.about,
-.inner-container
-{
 
-    background-color: var(--whiteBG);
-  
-}
 
-.mytext{
-    color: var(--contrastColor);
-}
 
-.team 
-{
 
-}
-
-.arrow {
-    background-color: var(--candsColor);
+.about-header.text.reverse h3 {
     color: var(--whiteBG);
 }
 
 
 
+
+.inner-container{
+    background-color: var(--whiteBG);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+
+.team-title {
+    color: var(--contrastColor);
+}
+
+.team-title::before,
+.team-title::after {
+border-color: var(--contrastColor);
+}
 .square-holder {
   background-color:#f1f1f1;
     border-color: #cecece;
@@ -232,10 +260,11 @@ footer {
     background-color: var(--candsColor);
 }
 
-.footer__navegation li {
+.footer-navegation li {
     border-color: #fdfdfd38;
 } 
 
 footer .copyright {
     color:var(--whiteBG);
 }
+

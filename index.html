@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="css/structure.css">
         <link rel="stylesheet" href="css/theme.css">
 
-        <!-- FONTS -->
+        <!-- LANGUAGE -->
 
 
 
@@ -17,47 +17,66 @@
     <body>
         <main>
             <header>
-                <a href="/" class="logo" alt="CANDS Logo"></a>
-                <a href="#showcase" class="skip-nav-link">Skip Navigation</a>
+                <a href="/" class="logo"></a>
+                <a href="#showcase" class="skip-nav-link" id="skip"></a>
                 <div class="toggle"></div>
                 <nav class="menu">
                     <ul>
-                        <li><a href="#" onclick="escape()" style="--indexCount: 0;">Home</a></li>
-                        <li><a href="#services" onclick="escape()" style="--indexCount: 1;">Our Services</a></li>
-                        <li><a href="#about"  onclick="escape()" style="--indexCount: 2;">About Us</a></li>
-                        <li><a href="#partners"  onclick="escape()" style="--indexCount: 3;">Our Partners</a></li>
-                        <li><a onclick="escape()" href="#contact" style="--indexCount: 5;">Contact</a></li>
+                        <li><a href="#" onclick="escape()" style="--indexCount: 0;" id="navHome"></a></li>
+                        <li><a href="#services" onclick="escape()" style="--indexCount: 1;" id="navApp"></a></li>
+                        <li><a href="#about" onclick="escape()" style="--indexCount: 2;" id="navAbout"></a></li>
+                        <li><a href="#team" onclick="escape()" style="--indexCount: 3;" id="navTeam"></a></li>
+                        <li><a href="#contact" onclick="escape()" style="--indexCount: 5;" id="navContact"></a></li>
                     </ul>
 
-                <input type="checkbox" id="switch" >                     
+                <input type="checkbox" id="switch" onClick="langSwitch()">                     
                     <div class="app">
                         <div class="lang" >
                             <label for="switch" >
-                                <div class="switcher last-menu-option"  tabindex="0" onclick="swap()"></div>
+                                <div class="switcher last-menu-option"  tabindex="0"></div>
                                 <div class="names">
-                                    <p class="light">Español</p>
-                                    <p class="dark">English</p>
+                                    <p class="light">English</p>
+                                    <p class="dark">Español</p>
                                 </div>
                             </label>
                         </div>
                     </div>
                 </nav>
-            </header>
-            <div class="lights-off"></div>
-            <section class="showcase" id="showcase">
+            
+<!--
 
-             
-            <video src="img/rain.mp4" muted loop autoplay></video>
+El script de cambio de lenguaje tiene que encontrarse abajo del checkbox, pero mientras más abajo esté, más tarde ocurre el cambio. Para evitar que el usuario note el cambio, lo estoy ubicando lo más arriba posible. 
+
+-->
+            <script src="js/langSwitcher.js" type="text/javascript"></script>
+                
+                
+            </header>
+            
+
+            <div class="lights-off"></div>
+            <div class="videoBox" >
+                <div class="videoCloser" onclick="videoFocus()"></div>
+                <video class="" src="img/rain.mp4" controls></video>
+                <div class="videoEscape" onclick="videoFocus()"></div>
+            </div>
+        <section class="showcase" id="showcase">
+
+            <video class="video-bg" src="img/rain.mp4" muted loop autoplay></video>
             <div class="overlay"></div>
+
             <div class="text" >
-                <h2>TRUE simplicity</h2> 
-                <h3>AT YOUR FINGER TIPS</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                consequat.</p>
-                <a href="#services">LEARN MORE</a>
-                    <a href="#contact" class="low">CONTACT US</a>
+                <h2 id="showcaseTitle"></h2> 
+                <h3 id="showcaseTitleBottom"></h3>
+                <p id="showcaseDescription"></p>
+                <a href="#about" id="showcaseB1"></a>
+                <a href="#contact" class="low" id="showcaseB2"></a>
+            </div>
+                
+            <div class="play" >
+                <button class="videoSwitch" onclick="videoFocus()">
+                <img src="img/buttons/btn_play.png" />
+                </button>
             </div>
         </section>
 
@@ -91,185 +110,181 @@
             </svg>
             
             <div class="phone">
-            <img src="img/all.png" />
+            <img src="img/three.png" />
             </div>
             
             
-            <div class="text" >
-                <h2>True simplicity</h2> 
-                <h3>With you, always</h3>
-                <p>Never find yourself second-guessing your data ever again. <strong>Score</strong> follows you wherever you go: from your computer to your mobile devices, bringing you the most accurate data at the press of a button. Because true simplicity only comes from absolute availability.</p>
-                <a href="#services" class="reverse-color"><i class="fab fa-android"></i>Android</a>
-                <a href="#services" class="reverse-color"><i class="fab fa-apple"></i>Apple</a>
-                <a href="#services" class="reverse-color"><i class="fas fa-ellipsis-v"></i></a> 
+            <div class="text">
+                <h2 id="appTitle"></h2> 
+                <h3 id="appTitleBottom"></h3>
+                <p id="appDescription"></p>
+                <div class="appVideoHolder">
+                    <div class="play" >
+                    <button class="videoSwitch" onclick="videoFocus()">
+                    <img src="img/buttons/btn_play.png" />
+                    </button>
+                    </div>
+                    <div class="play" >
+                    <button class="videoSwitch" onclick="videoFocus()">
+                    <img src="img/buttons/btn_play.png" />
+                    </button>
+                    </div>
+                </div>
             </div>
 
 
 
         </section>
         <section class="about" id="about">
-            <div class="inner-container fade-in from-right">
-                <h1>About Us</h1>
-                <p class="mytext">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus velit ducimus, enim inventore earum, eligendi nostrum pariatur necessitatibus eius dicta a voluptates sit deleniti autem error eos totam nisi neque voluptates sit deleniti autem error eos totam nisi neque.
-                
-                </p>
-                <a href="#" class="fade-in">CALL TO ACTION</a> 
-            </div>
-        </section>
-        
-            <section class="team">
-                <div class="arrows">
-                    <button class="arrow low" onclick="#">&#10094;</button>
-                    <button class="arrow low" onclick="#">&#10095;</button>
+            <div class="about-header text reverse" >
+                <div class="about-title" >
+                    <h3 id="aboutTitle"></h3>
+                    <h2 id="aboutTitleBottom"></h2> 
                 </div>
-            	<div class="members">
-            		<div class="person active-person">
-            			<img src="/img/images/avatar/img_avatar_female.png" alt="" class="avatar">
+                <div>
+                    <div class="inner-container">
+                        <p class="text"  id="aboutDescription1"></p>
+                        <p class="text"  id="aboutDescription2"></p>
+                        <p class="text"  id="aboutDescription3"></p>
+                    </div>
+                </div>
+            </div>            
+            <div class="about-body">
+                <div class="members">
+
+                    <h3 class="team-title" id="teamTitle"></h3>
+            		<div class="person">
+            			<img src="/img/img_avatar_male.png" alt="" class="avatar">
                         <div class="person-info">
-                            <h4>Juana Carlosa</h4>
-                            <p>I’d like to offer you moral support, but I have questionable morals.</p>
+                            <h4>Tony Bernadotte</h4>
+                            <h5>General Manager</h5>
+                            <blockquote id="teamQ1"></blockquote>
                         </div>
             		</div>
-            		<div class="person">
-            			<img src="/img/images/avatar/img_avatar_male.png" alt="" class="avatar">
+                    <div class="person">
+            			<img src="/img/img_avatar_male.png" alt="" class="avatar">
                         <div class="person-info">
-                            <h4>Juan Carlos</h4>
-                            <p>I’d like to offer you moral support, but I have questionable morals.</p>
+                            <h4>Juan Pucheta</h4>
+                            <h5>Commercial Manager</h5>
+                            <blockquote id="teamQ2"></blockquote>
                         </div>
             		</div>
-            		<div class="person">
-            			<img src="/img/images/avatar/img_avatar_female.png" alt="" class="avatar">
+                    <div class="person">
+            			<img src="/img/img_avatar_male.png" alt="" class="avatar">
                         <div class="person-info">
-                            <h4></h4>
-                            <p></p>
+                            <h4>Leandro Ahumada</h4>
+                            <h5>Architectural, Design, and Development Manager</h5>
+                            <blockquote id="teamQ3"></blockquote>
                         </div>
             		</div>
-            		<div class="person">
-            			<img src="/img/images/avatar/img_avatar_male.png" alt="" class="avatar">
+                    <div class="person">
+            			<img src="/img/img_avatar_female.png" alt="" class="avatar">
                         <div class="person-info">
-                            <h4>Juan Carlos</h4>
-                            <p>I’d like to offer you moral support, but I have questionable morals.</p>
+                            <h4>Samanta Campos</h4>
+                            <h5>Industrial Engineer</h5>
+                            <blockquote id="teamQ4"></blockquote>
                         </div>
             		</div>
             	</div>
-                
+            </div>
             </section>
 
-<section id="partners">
-<div class="container">
-<strong>
-<div class="row">
-<div class="col">
-<div class="square-holder">
-<img alt="" src="https://www.pmits.co.uk/portals/0/images/partners/solar-communications-200.png" />
-</div>
-</div>
-<div class="col">
-<div class="square-holder">
-<img alt="" src="https://www.pmits.co.uk/portals/0/images/partners/cbf-200.png" />
-</div>
-</div>
-<div class="col">
-<div class="square-holder">
-<img alt="" src="https://www.pmits.co.uk/portals/0/images/partners/gxs-200.png" />
-</div>
-</div>
-<div class="col">
-<div class="square-holder">
-<img alt="" src="https://www.pmits.co.uk/portals/0/images/partners/jpr-200.png" />
-</div>
-</div>
-<div class="col">
-<div class="square-holder">
-<img alt="" src="https://www.pmits.co.uk/portals/0/images/partners/talk-internet-200.png" />
-</div>
-</div>
-<div class="col">
-<div class="square-holder">
-<img alt="" src="https://www.pmits.co.uk/Portals/0/img/opera3_logo.png" />
-</div>
-</div>
-<div class="col">
-<div class="square-holder">
-<img alt="" src="https://www.pmits.co.uk/Portals/0/pegasus-logo.png" />
-</div>
-</div>
-<div class="col">
-<div class="square-holder">
-<img alt="" src="https://www.pmits.co.uk/Portals/0/sage business partner.jpg" />
-</div>
-</div>
-</div>
-</strong>
-</div>
-</section>
-
-<section class="contact" id="contact">
-
-    <div class="container fade-in from-left">
-        <div class="contact-info">
-            <div class="contact-option">
-                <div class="info-head">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <h4>Adresss</h4>
+            <section id="partners">
+                <div class="container">
+                    <div class="row">
+                    <div class="col">
+                        <div class="square-holder">
+                            <img alt="" src="img/logos/clients/adient.svg" />
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="square-holder">
+                            <img alt="" src="img/logos/clients/tenneco.svg" />
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="square-holder">
+                            <img alt="" src="img/logos/clients/faurecia.svg" />
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="square-holder">
+                            <img alt="" src="img/logos/clients/yazaki.svg" />
+                        </div>
+                    </div>
+                        <div class="col">
+                            <div class="square-holder">
+                                <img alt="" src="img/logos/clients/corven.svg" />
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <p>16192 Coastal Hwy</p>
-                <p>Lewes, DE 19958</p>
-                <p>United States</p>
-            </div>
-            <div class="contact-option">
-                <div class="info-head">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <h4>Adresss</h4>
+            </section>
+
+            <section class="contact" id="contact">
+
+                <div class="container fade-in from-left">
+                    <div class="contact-info">
+                        <a href="mailto:contact@candsapp.com" class="nostyle">
+                            <div class="contact-option">
+                                <div class="info-head">
+                                    <i class="fas fa-envelope"></i>
+                                    <h4 id="contactEmail"></h4>
+                                </div>
+                                <p>contact@candsapp.com</p>
+                            </div>  
+                        </a>
+                        <div class="contact-option">
+                            <div class="info-head">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <h4 id="contactA1"></h4>
+                            </div>
+                            <p>16192 Coastal Hwy</p>
+                            <p>Lewes, DE 19958</p>
+                            <p>United States</p>
+                        </div>
+                        <div class="contact-option">
+                            <div class="info-head">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <h4 id="contactA2"></h4>
+                            </div>
+                            <p>Diagonal 74 N° 1490 Piso 2</p>
+                            <p>La Plata, Buenos Aires</p>
+                            <p>Argentina</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-form">
+                        <h3 id="contactTitle"></h3>
+                        <p id="contactDescription"></p>
+                        <form>
+                            <input class="fade-in from-left" type="text" placeholder="" id="contactNamePH" required/>
+                            <input class="fade-in from-left" type="email" placeholder="" id="contactEmailPH" required/>
+                            <textarea class="fade-in from-left" placeholder="" id="contactText" required></textarea>
+                            <input class="" type="submit" value="" id="contactB1"/>
+                        </form>
+                    </div>
+
                 </div>
-                <p>Diagonal 74 N° 1490 Piso 2</p>
-                <p>La Plata, Buenos Aires</p>
-                <p>Argentina</p>
-            </div>
-            <div class="contact-option">
-                <div class="info-head">
-                    <i class="fas fa-envelope"></i>
-                    <h4>Email us</h4>
-                </div>
-                <p>contact@cands.com.ar</p>
-            </div>
-        </div>
-        
-        <div class="contact-form">
-            <h3>Say goodbye to complexity, <span>get in touch today!</span></h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur elementum posuere dolor in gravida. Suspendisse finibus massa eget lacus accumsan, in viverra odio pellentesque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam auctor urna elit, vitae auctor nunc vestibulum eu.</p>
-            <form>
-                <input class="fade-in from-left" type="text" placeholder="Enter your name" required />
-                <input class="fade-in from-left" type="email" placeholder="Enter your email" required/>
-                <textarea class="fade-in from-left" placeholder="Tell us how we can help you!" required></textarea>
-                <input class="" type="submit" value="Send!"/>
-            </form>
-        </div>
-
-    </div>
-    
-    
-</section>
-
-        <footer>
-            <p class="copyright">© 2022 CandSArg. All rights reserved | <span>Designed by Martín Davico</span></p>
-            
-            <ul class="footer__navegation">
-                <li><a href="#">Home</a></li>
-                <li><a href="#services">Our Services</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#partners">Our Partners</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
 
 
+            </section>
 
-        </footer>
+            <footer>
+                <p class="copyright" id="copyright"></p>
+
+                <ul class="footer-navegation">
+                    <li><a href="#" id="footerHome"></a></li>
+                    <li><a href="#services" id="footerApp"></a></li>
+                    <li><a href="#about" id="footerAbout"></a></li>
+                    <li><a href="#team" id="footerTeam"></a></li>
+                    <li><a href="#contact" id="footerContact"></a></li>
+                </ul>
+            </footer>
         </main>
-                    <!-- MENU HANDLER -->
 
-            <script type="text/javascript">
+                    <!-- MENU HANDLER -->
+        <script type="text/javascript">
              var isOpen = new Boolean(false);
              const menuToggle = document.querySelector('.toggle');
              const menuChild = document.querySelector('.menu ul li a');
@@ -291,7 +306,6 @@
                 
           menuEscape.addEventListener('click', () => {
               escape();
-              
           })
           menuChild.addEventListener('focus', () => {
              if (isOpen == false) {
@@ -314,9 +328,21 @@
                 
 
             </script>
+            <script type="text/javascript">
+                const videoBox = document.querySelector('.videoBox');
+                const videoEscape = document.querySelector('.videoEscape');
 
-            <script src="js/observers.js"></script>
+                function videoFocus() {
+                    showcase.classList.toggle('video');
+                    videoBox.classList.toggle('active');
+                }           
+
+
+                
+
+        </script>
+        <script src="js/observers.js"></script>
             <!-- ICONS -->
-          <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     </body>
 </html>
