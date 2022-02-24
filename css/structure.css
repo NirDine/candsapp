@@ -508,7 +508,9 @@ body.video .videoBox {
 .mid-section .phone img {
 
     height: 90%;
+    width: 100%;
 
+    
 }
 
 .appVideoHolder {
@@ -822,7 +824,7 @@ body.video .videoBox {
 
 
 .members img.avatar {
-    padding-right: 2em;
+    margin-right: 2em;
   
     max-height: 12em;
 
@@ -838,9 +840,7 @@ body.video .videoBox {
     .about-body {
         background: none;
     }    
-    .person img {
-    height: 7em;
-}
+
 
 
    
