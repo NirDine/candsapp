@@ -145,7 +145,7 @@ var spanish = {
         contact: {
             email_title: "Correo",
             address: "Dirección",
-            title: "Diga adiós a la complejidad, <span>ponte en contacto hoy!</span>",
+            title: "Dí adiós a la complejidad, <span>ponte en contacto hoy!</span>",
             description: "Dinos todo acerca de ti! Qué cosas increíbles hace tu empresa? A qué problemas te enfrentas? Estás a solo un mensaje de distancia de la grandeza!",
             name_ph: "Nombre",
             email_ph: "ejemplo@ejemplo.com",

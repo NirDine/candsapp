@@ -85,7 +85,7 @@ header.nav-scrolled .logo {
   position: relative;
   width: 60px;
   height: 60px;
-  background: url(/img/buttons/menu.png);
+  background: url(/img/buttons/menu.webp);
   background-repeat: no-repeat;
   background-size: 30px;
   background-position: center;
@@ -93,12 +93,12 @@ header.nav-scrolled .logo {
 }
 
 .nav-scrolled .toggle {
-     background-image: url(/img/buttons/menu-dark.png); 
+     background-image: url(/img/buttons/menu-dark.webp); 
 }
 .toggle.active,
 .videoCloser
 {
-  background: url(/img/buttons/close.png);
+  background: url(/img/buttons/close.webp);
   background-repeat: no-repeat;
   background-size: 25px;
   background-position: center;
@@ -108,7 +108,7 @@ header.nav-scrolled .logo {
 }
 
 .nav-scrolled .toggle.active {
-    background-image: url(/img/buttons/close-dark.png);
+    background-image: url(/img/buttons/close-dark.webp);
 }
 
 .showcase
@@ -519,7 +519,7 @@ body.video .videoBox {
 .appVideoHolder .play {
     box-shadow: 10px 10px 30px -15px black;
     width: 47.5%;
-    background: url(/img/techworld.jpg) no-repeat;
+    background: url(/img/techworld.webp) no-repeat;
     background-size: cover;
     opacity: 0.5;
     background-position: right;
@@ -539,7 +539,7 @@ body.video .videoBox {
 
 
 .appvideoHolder .play button {
-    padding: 27% 40%;
+    padding: 22.5% 40%;
 
 }
 
@@ -646,7 +646,7 @@ body.video .videoBox {
     margin-bottom: var(--gap);
     width: 100%;
     padding-block:5em;
-        background-image: url(/img/warehouse.jpg);
+        background-image: url(/img/warehouse.webp);
     background-size: cover;
     background-repeat: no-repeat;
       background-attachment: fixed;
@@ -681,7 +681,7 @@ body.video .videoBox {
 .about-body {
     width: 100%;
     padding-block:20px;
-    background-image: url(/img/team-bg.png);
+    background-image: url(/img/team-bg.webp);
     background-repeat: no-repeat;
     background-position: center;
 
@@ -944,11 +944,14 @@ border: 0px;
 }
 
 
-.contact .contact-info i {
-    font-size: 3em;
+.contact .contact-info img {
     padding-block:var(--gap);
     
 }
+
+.contact .contact-info img.email {    width: 4em;}
+
+.contact .contact-info img.address {    width: 3em;}
 
 .contact .contact-info h4{
     font-weight: 600;
@@ -959,6 +962,7 @@ border: 0px;
     margin-top: var(--gap);
     font-weight: 300;
     font-style: italic;
+    width: 22ch;
 }
 
 .contact-form {
@@ -969,6 +973,10 @@ border: 0px;
 @media (max-width: 991px) {
     .contact-form {
     padding-inline: 2em;
+    }
+    
+    .contact .contact-info p {
+        width: auto;
     }
 }
     
