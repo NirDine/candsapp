@@ -18,22 +18,22 @@
         <main>
             <header>
                 <a href="/" class="logo"></a>
-                <a href="#showcase" class="skip-nav-link" id="skip"></a>
+                <a href="#showcase" class="skip-nav-link" id="skip">Skip Navigation</a>
                 <div class="toggle"></div>
                 <nav class="menu">
                     <ul>
-                        <li><a href="#" onclick="escape()" style="--indexCount: 0;" id="navHome"></a></li>
-                        <li><a href="#services" onclick="escape()" style="--indexCount: 1;" id="navApp"></a></li>
-                        <li><a href="#about" onclick="escape()" style="--indexCount: 2;" id="navAbout"></a></li>
-                        <li><a href="#team" onclick="escape()" style="--indexCount: 3;" id="navTeam"></a></li>
-                        <li><a href="#contact" onclick="escape()" style="--indexCount: 5;" id="navContact"></a></li>
+                        <li><a href="#" onclick="escape()" style="--indexCount: 0;" id="navHome">Home</a></li>
+                        <li><a href="#services" onclick="escape()" style="--indexCount: 1;" id="navApp">Score</a></li>
+                        <li><a href="#about" onclick="escape()" style="--indexCount: 2;" id="navAbout">About Us</a></li>
+                        <li><a href="#team" onclick="escape()" style="--indexCount: 3;" id="navTeam">Our Team</a></li>
+                        <li><a href="#contact" onclick="escape()" style="--indexCount: 5;" id="navContact">Contact us</a></li>
                     </ul>
 
-                <input type="checkbox" id="switch" onClick="langSwitch()">                     
+                <input type="checkbox" id="switch" onclick="langSwitch()">                     
                     <div class="app">
-                        <div class="lang" >
-                            <label for="switch" >
-                                <div class="switcher last-menu-option"  tabindex="0"></div>
+                        <div class="lang">
+                            <label for="switch">
+                                <div class="switcher last-menu-option" tabindex="0"></div>
                                 <div class="names">
                                     <p class="light">English</p>
                                     <p class="dark">Español</p>
@@ -55,78 +55,73 @@ El script de cambio de lenguaje tiene que encontrarse abajo del checkbox, pero m
             
 
             <div class="lights-off"></div>
-            <div class="videoBox" >
+            <div class="videoBox">
                 <div class="videoCloser" onclick="videoFocus()"></div>
-                <video class="" src="img/rain.mp4" controls></video>
+                <video class="" src="img/rain.mp4" controls=""></video>
                 <div class="videoEscape" onclick="videoFocus()"></div>
             </div>
         <section class="showcase" id="showcase">
 
-            <video class="video-bg" src="img/rain.mp4" muted loop autoplay></video>
+            <video class="video-bg" src="img/rain.mp4" muted="" loop="" autoplay=""></video>
             <div class="overlay"></div>
 
-            <div class="text" >
-                <h2 id="showcaseTitle"></h2> 
-                <h3 id="showcaseTitleBottom"></h3>
-                <p id="showcaseDescription"></p>
-                <a href="#about" id="showcaseB1"></a>
-                <a href="#contact" class="low" id="showcaseB2"></a>
+            <div class="text">
+                <h2 id="showcaseTitle">With <span class="highlight">CandS</span></h2> 
+                <h3 id="showcaseTitleBottom">say bye to Complexity</h3>
+                <p id="showcaseDescription">We're here to take your company to the next level! We systematically eliminate the complexity in your tasks, developing tools fitted to your company's needs and giving you the freedom and time to strive for your best! Because success is our journey together.</p>
+                <a href="#about" id="showcaseB1">Learn More</a>
+                <a href="#contact" class="low" id="showcaseB2">Contact Us</a>
             </div>
                 
-            <div class="play" >
+            <div class="play">
                 <button class="videoSwitch" onclick="videoFocus()">
-                    <img src="img/buttons/btn_play.webp" height="71" width="71" alt="Play button" />
+                <img src="img/buttons/btn_play.webp"  height="71" width="71" alt="Play button">
                 </button>
             </div>
         </section>
 
         <section id="services" class="mid-section">
-            <svg class="editorial top"
-                 xmlns="http://www.w3.org/2000/svg"
-                 xmlns:xlink="http://www.w3.org/1999/xlink"
-                 viewBox="0 24 150 28 "
-                 preserveAspectRatio="none">
+            <svg class="editorial top" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28 " preserveAspectRatio="none">
              <defs>
-             <path id="gentle-wave"
-             d="M-160 44c30 0 
+             <path id="gentle-wave" d="M-160 44c30 0 
                 58-18 88-18s
                 58 18 88 18 
                 58-18 88-18 
                 58 18 88 18
-                v44h-352z" />
+                v44h-352z"></path>
               </defs>
               <g class="parallax1">
-               <use xlink:href="#gentle-wave" x="50" y="3" />
+               <use xlink:href="#gentle-wave" x="50" y="3"></use>
               </g>
                 <g class="parallax2">
-               <use xlink:href="#gentle-wave" x="50" y="0" />
+               <use xlink:href="#gentle-wave" x="50" y="0"></use>
                 </g>
                   <g class="parallax3">
-               <use xlink:href="#gentle-wave" x="50" y="9" />
+               <use xlink:href="#gentle-wave" x="50" y="9"></use>
                </g>
                 <g class="parallax4">
-               <use xlink:href="#gentle-wave" x="50" y="6" />  
+               <use xlink:href="#gentle-wave" x="50" y="6"></use>  
               </g>
             </svg>
             
             <div class="phone">
-            <img src="img/all.webp" width="912" height="830" alt="Various devices showing Score's functionalities."/>
+            <img src="img/all.webp" width="912" height="830" alt="Various devices showing Score's functionalities." />
             </div>
             
             
             <div class="text">
-                <h2 id="appTitle"></h2> 
-                <h3 id="appTitleBottom"></h3>
-                <p id="appDescription"></p>
+                <h2 id="appTitle">TRUE SIMPLICITY</h2> 
+                <h3 id="appTitleBottom">WITH YOU, ALWAYS</h3>
+                <p id="appDescription">Never find yourself second-guessing your data ever again. Score follows you wherever you go: from your computer to your mobile devices, bringing you the most accurate data at the press of a button. Because true simplicity only comes from absolute availability.</p>
                 <div class="appVideoHolder">
-                    <div class="play" >
+                    <div class="play">
                     <button class="videoSwitch" onclick="videoFocus()">
-                        <img src="img/buttons/btn_play.webp" height="71" width="71" alt="Play button" />
+                    <img src="img/buttons/btn_play.webp"  height="71" width="71" alt="Play button">
                     </button>
                     </div>
-                    <div class="play" >
+                    <div class="play">
                     <button class="videoSwitch" onclick="videoFocus()">
-                        <img src="img/buttons/btn_play.webp" height="71" width="71" alt="Play button" />
+                    <img src="img/buttons/btn_play.webp"  height="71" width="71" alt="Play button">
                     </button>
                     </div>
                 </div>
@@ -136,29 +131,29 @@ El script de cambio de lenguaje tiene que encontrarse abajo del checkbox, pero m
 
         </section>
         <section class="about" id="about">
-            <div class="about-header text reverse" >
-                <div class="about-title" >
-                    <h3 id="aboutTitle"></h3>
-                    <h2 id="aboutTitleBottom"></h2> 
+            <div class="about-header text reverse">
+                <div class="about-title">
+                    <h3 id="aboutTitle">LET US TELL YOU A BIT</h3>
+                    <h2 id="aboutTitleBottom">ABOUT US</h2> 
                 </div>
                 <div>
                     <div class="inner-container">
-                        <p class="text"  id="aboutDescription1"></p>
-                        <p class="text"  id="aboutDescription2"></p>
-                        <p class="text"  id="aboutDescription3"></p>
+                        <p class="text" id="aboutDescription1">CandS, Consulting and Service, was founded to solve an ever-present issue plaguing the industry: the <span class="highlight">over-complexification of basic tasks</span>. Over the years, we've been on top of that problem, streamlining our clients' infrastructure and providing them with the tools to  <span class="highlight">boost their efficiency tenfold</span>.</p>
+                        <p class="text" id="aboutDescription2">Our team boasts an impressive  <span class="highlight">50 years of collective experience</span> in software development, and with the regular acquisition of new and exciting talent, we always have the best crew for the task at hand.</p>
+                        <p class="text" id="aboutDescription3">We aim to exponentially improve the efficiency of your company,  <span class="highlight">solving issues before they become problems</span> and reducing the complexity of your every task. To that end, we've developed tools such as our in-house multiplatform app,  <span class="highlight">Score!</span> Allowing our clients to monitor their data, order stock automatically, manage the routes and loads of delivery trucks, and even notify their suppliers so that the exact amounts of raw material are ready when they need to be.</p>
                     </div>
                 </div>
             </div>            
             <div class="about-body">
                 <div class="members">
 
-                    <h3 class="team-title" id="teamTitle"></h3>
+                    <h3 class="team-title" id="teamTitle">meet our team leaders</h3>
             		<div class="person">
             			<img src="/img/img_avatar_male.webp" alt="" height="192" width="192" class="avatar">
                         <div class="person-info">
                             <h4>Tony Bernadotte</h4>
                             <h5>General Manager</h5>
-                            <blockquote id="teamQ1"></blockquote>
+                            <blockquote id="teamQ1">“I use my experience to effectively lead teams that develop for resource optimization”</blockquote>
                         </div>
             		</div>
                     <div class="person">
@@ -174,7 +169,7 @@ El script de cambio de lenguaje tiene que encontrarse abajo del checkbox, pero m
                         <div class="person-info">
                             <h4>Leandro Ahumada</h4>
                             <h5>Architectural, Design, and Development Manager</h5>
-                            <blockquote id="teamQ3"></blockquote>
+                            <blockquote id="teamQ3">“I want the work that I do to matter, and that drive has lead me to C&amp;S.”</blockquote>
                         </div>
             		</div>
                     <div class="person">
@@ -194,27 +189,27 @@ El script de cambio de lenguaje tiene que encontrarse abajo del checkbox, pero m
                     <div class="row">
                     <div class="col">
                         <div class="square-holder">
-                            <img alt="" src="img/logos/clients/adient.svg" />
+                            <img alt="" src="img/logos/clients/adient.svg">
                         </div>
                     </div>
                     <div class="col">
                         <div class="square-holder">
-                            <img alt="" src="img/logos/clients/tenneco.svg" />
+                            <img alt="" src="img/logos/clients/tenneco.svg">
                         </div>
                     </div>
                     <div class="col">
                         <div class="square-holder">
-                            <img alt="" src="img/logos/clients/faurecia.svg" />
+                            <img alt="" src="img/logos/clients/faurecia.svg">
                         </div>
                     </div>
                     <div class="col">
                         <div class="square-holder">
-                            <img alt="" src="img/logos/clients/yazaki.svg" />
+                            <img alt="" src="img/logos/clients/yazaki.svg">
                         </div>
                     </div>
                         <div class="col">
                             <div class="square-holder">
-                                <img alt="" src="img/logos/clients/corven.svg" />
+                                <img alt="" src="img/logos/clients/corven.svg">
                             </div>
                         </div>
                     </div>
@@ -223,21 +218,21 @@ El script de cambio de lenguaje tiene que encontrarse abajo del checkbox, pero m
 
             <section class="contact" id="contact">
 
-                <div class="container fade-in from-left">
+                <div class="container fade-in from-left appear">
                     <div class="contact-info">
                         <a href="mailto:contact@candsapp.com" class="nostyle">
                             <div class="contact-option">
                                 <div class="info-head">
-                                    <img src="img/email.svg" class="email"  height="64" width="64" />
-                                    <h4 id="contactEmail"></h4>
+                                    <img src="img/email.svg" class="email"   height="64" width="64">
+                                    <h4 id="contactEmail">Email us</h4>
                                 </div>
                                 <p>contact@candsapp.com</p>
                             </div>  
                         </a>
                         <div class="contact-option">
                             <div class="info-head">
-                                <img src="img/address.svg" class="address" height="88" width="48"  />
-                                <h4 id="contactA1"></h4>
+                                <img src="img/address.svg" class="address" height="88" width="48">
+                                <h4 id="contactA1">Address</h4>
                             </div>
                             <p>16192 Coastal Hwy</p>
                             <p>Lewes, DE 19958</p>
@@ -245,8 +240,8 @@ El script de cambio de lenguaje tiene que encontrarse abajo del checkbox, pero m
                         </div>
                         <div class="contact-option">
                             <div class="info-head">
-                                <img src="img/address.svg" class="address" height="88" width="48"  />
-                                <h4 id="contactA2"></h4>
+                                <img src="img/address.svg" class="address" height="88" width="48">
+                                <h4 id="contactA2">Address</h4>
                             </div>
                             <p>Diagonal 74 N° 1490 Piso 2</p>
                             <p>La Plata, Buenos Aires</p>
@@ -255,13 +250,13 @@ El script de cambio de lenguaje tiene que encontrarse abajo del checkbox, pero m
                     </div>
 
                     <div class="contact-form">
-                        <h3 id="contactTitle"></h3>
-                        <p id="contactDescription"></p>
+                        <h3 id="contactTitle">Say goodbye to complexity, <span>get in touch today!</span></h3>
+                        <p id="contactDescription">Let us know about you! What incredible things does your company do? What troubles do you face? You're just one message away from greatness!</p>
                         <form>
-                            <input class="fade-in from-left" type="text" placeholder="" id="contactNamePH" required/>
-                            <input class="fade-in from-left" type="email" placeholder="" id="contactEmailPH" required/>
-                            <textarea class="fade-in from-left" placeholder="" id="contactText" required></textarea>
-                            <input class="" type="submit" value="" id="contactB1"/>
+                            <input class="fade-in from-left appear" type="text" placeholder="Enter your name" id="contactNamePH" required="">
+                            <input class="fade-in from-left appear" type="email" placeholder="Enter your email" id="contactEmailPH" required="">
+                            <textarea class="fade-in from-left appear" placeholder="Tell us how we can help you!" id="contactText" required=""></textarea>
+                            <input class="" type="submit" value="Send!" id="contactB1">
                         </form>
                     </div>
 
@@ -271,18 +266,17 @@ El script de cambio de lenguaje tiene que encontrarse abajo del checkbox, pero m
             </section>
 
             <footer>
-                <p class="copyright" id="copyright"></p>
+                <p class="copyright" id="copyright">© 2022 CandSArg. All rights reserved | <span>Designed by Martín Davico</span></p>
 
                 <ul class="footer-navegation">
-                    <li><a href="#" id="footerHome"></a></li>
-                    <li><a href="#services" id="footerApp"></a></li>
-                    <li><a href="#about" id="footerAbout"></a></li>
-                    <li><a href="#team" id="footerTeam"></a></li>
-                    <li><a href="#contact" id="footerContact"></a></li>
+                    <li><a href="#" id="footerHome">Home</a></li>
+                    <li><a href="#services" id="footerApp">Score</a></li>
+                    <li><a href="#about" id="footerAbout">About Us</a></li>
+                    <li><a href="#team" id="footerTeam">Our Team</a></li>
+                    <li><a href="#contact" id="footerContact">Contact us</a></li>
                 </ul>
             </footer>
         </main>
-
                     <!-- MENU HANDLER -->
         <script type="text/javascript">
              var isOpen = new Boolean(false);
