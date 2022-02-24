@@ -207,6 +207,16 @@ color: var(--candsColor);
     border-bottom-left-radius: 10px;
 }
 
+@media (max-width: 1100px) {
+
+    .inner-container{
+
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+
+    }
+}
+
 
 .team-title {
     color: var(--contrastColor);

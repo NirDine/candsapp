@@ -460,7 +460,7 @@ body.video .videoBox {
   .text h2,
   .text.reverse h2
   {
-    font-size: 4em;
+    font-size: 3em;
   }
   .text h3
   {
@@ -709,12 +709,17 @@ body.video .videoBox {
     }
     
     .inner-container{
-    float: none;
+        float: none;
+        padding: 1em;
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+        margin-top:3.5em;
 
-    border-top-left-radius: 0px;
-    border-bottom-left-radius: 0px;
-    margin-top:3.5em;
-}
+    }
+       .inner-container p{
+
+        width: 100%;
+    }
 }
 
 .about-body {
@@ -841,7 +846,9 @@ body.video .videoBox {
         background: none;
     }    
 
-
+    .person-info blockquote{
+     display: none;   
+    }
 
    
     
@@ -1097,7 +1104,15 @@ footer .copyright span {
     footer {
 
         flex-direction:column;
-    justify-content: center;
+        justify-content: center;
+        align-items: center;
+
+    }
+}
+
+@media (max-width: 991px) {
+    footer .footer-navegation {
+        display: none;
 
 
     }
