@@ -53,7 +53,7 @@ El script de cambio de lenguaje tiene que encontrarse abajo del checkbox, pero m
             <div class="lights-off"></div>
             <div class="videoBox">
                 <div class="videoCloser" onclick="videoFocus()"></div>
-                <video class="" src="img/rain.mp4" controls=""></video>
+                <video class="targetVideo" src="" controls=""></video>
                 <div class="videoEscape" onclick="videoFocus()"></div>
             </div>
         <section class="showcase" id="showcase">
@@ -70,7 +70,7 @@ El script de cambio de lenguaje tiene que encontrarse abajo del checkbox, pero m
             </div>
                 
             <div class="play">
-                <button class="videoSwitch" onclick="videoFocus()">
+                <button class="videoSwitch" onclick="videoFocus('img/rain.mp4')">
                 <img src="img/buttons/btn_play.webp"  height="71" width="71" alt="Play button">
                 </button>
             </div>
@@ -319,10 +319,15 @@ El script de cambio de lenguaje tiene que encontrarse abajo del checkbox, pero m
 
             </script>
             <script type="text/javascript">
-                const videoBox = document.querySelector('.videoBox');
-                const videoEscape = document.querySelector('.videoEscape');
+                var videoBox = document.querySelector('.videoBox');
+                var videoEscape = document.querySelector('.videoEscape');
+                var target = document.querySelector('.targetVideo');
 
-                function videoFocus() {
+
+                function videoFocus(source) {
+
+    
+                    target.setAttribute('src', source);
                     showcase.classList.toggle('video');
                     videoBox.classList.toggle('active');
                 }           
