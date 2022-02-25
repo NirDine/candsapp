@@ -53,12 +53,20 @@ El script de cambio de lenguaje tiene que encontrarse abajo del checkbox, pero m
             <div class="lights-off"></div>
             <div class="videoBox">
                 <div class="videoCloser" onclick="videoFocus()"></div>
-                <video class="targetVideo" src="" controls=""></video>
+                <video class="targetVideo" autoplay="true" src="" controls=""></video>
                 <div class="videoEscape" onclick="videoFocus()"></div>
             </div>
         <section class="showcase" id="showcase">
 
-            <video class="video-bg" src="img/rain.mp4" muted="" loop="" autoplay=""></video>
+            
+            
+            <!--    Video de intro, agregar cuando exista.   -->
+            <!--            
+
+            <video class="video-bg" src="videos/intro.mp4" muted="" loop="" autoplay=""></video>
+
+            -->
+            <div class="tempBG"></div>
             <div class="overlay"></div>
 
             <div class="text">
@@ -70,7 +78,7 @@ El script de cambio de lenguaje tiene que encontrarse abajo del checkbox, pero m
             </div>
                 
             <div class="play">
-                <button class="videoSwitch" onclick="videoFocus('img/rain.mp4')">
+                <button class="videoSwitch" onclick="videoFocus('videos/intro.mp4')">
                 <img src="img/buttons/btn_play.webp"  height="71" width="71" alt="Play button">
                 </button>
             </div>
@@ -111,12 +119,12 @@ El script de cambio de lenguaje tiene que encontrarse abajo del checkbox, pero m
                 <p id="appDescription">Never find yourself second-guessing your data ever again. Score follows you wherever you go: from your computer to your mobile devices, bringing you the most accurate data at the press of a button. Because true simplicity only comes from absolute availability.</p>
                 <div class="appVideoHolder">
                     <div class="play">
-                    <button class="videoSwitch" onclick="videoFocus()">
+                    <button class="videoSwitch" onclick="videoFocus('videos/apollo.mp4')">
                     <img src="img/buttons/btn_play.webp"  height="71" width="71" alt="Play button">
                     </button>
                     </div>
                     <div class="play">
-                    <button class="videoSwitch" onclick="videoFocus()">
+                    <button class="videoSwitch" onclick="videoFocus('videos/logistics.mp4')">
                     <img src="img/buttons/btn_play.webp"  height="71" width="71" alt="Play button">
                     </button>
                     </div>
@@ -262,7 +270,7 @@ El script de cambio de lenguaje tiene que encontrarse abajo del checkbox, pero m
             </section>
 
             <footer>
-                <p class="copyright" id="copyright">© 2022 CandSArg. All rights reserved | <span>Designed by Martín Davico</span></p>
+                <p class="copyright" id="copyright">© 2022 CandSArg. All rights reserved | <a href='https://web.nirdine.com'>Designed by Martín Davico</a></p>
 
                 <ul class="footer-navegation">
                     <li><a href="#" id="footerHome">Home</a></li>

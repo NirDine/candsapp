@@ -278,3 +278,6 @@ footer .copyright {
     color:var(--whiteBG);
 }
 
+footer .copyright a {
+    color:var(--whiteBG);
+}

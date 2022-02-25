@@ -154,7 +154,7 @@ var spanish = {
         },
         
         footer: {
-            copyright: "© 2022 CandSArg. Todos los derechos reservados | <span>Diseñado por Martín Davico</span>"
+            copyright: "© 2022 CandSArg. Todos los derechos reservados | <a href='https://web.nirdine.com'>Diseñador por Martín Davico</a>"
         }
     }
     
@@ -211,7 +211,7 @@ var english = {
         },
         
         footer: {
-            copyright: "© 2022 CandSArg. All rights reserved | <span>Designed by Martín Davico</span>"
+            copyright: "© 2022 CandSArg. All rights reserved | <a href='https://web.nirdine.com'>Designed by Martín Davico</a>"
         }
     }
     

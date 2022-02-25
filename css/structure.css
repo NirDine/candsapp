@@ -234,6 +234,7 @@ display: none;
   opacity: 0.8;
   filter: brightness(70%);
 }
+
 .overlay
 {
   position: absolute;
@@ -521,7 +522,8 @@ body.video .videoBox {
 .appVideoHolder .play {
     box-shadow: 10px 10px 30px -15px black;
     width: 47.5%;
-    background: url(/img/techworld.webp) no-repeat;
+    background-image: url(/img/LOGISITICS.webp);
+    background-repeat: no-repeat;
     background-size: cover;
     opacity: 0.5;
     background-position: right;
@@ -531,6 +533,15 @@ body.video .videoBox {
 	transition:background-position 0.25s ease-in-out;
 
 }
+
+.appVideoHolder .play:first-child {
+
+    background-image: url(/img/APOLLO.webp);
+
+
+
+}
+
 
 .appVideoHolder .play:hover {
     opacity: 1;
@@ -1095,7 +1106,7 @@ footer .copyright {
     font-size:1.1em;
 }
 
-footer .copyright span {
+footer .copyright a {
     opacity: 0.7;
 }
 
@@ -1257,3 +1268,36 @@ label {
   transform: translateX(0);
   opacity: 1;
 }
+
+
+
+
+
+
+/* QUITAR AL AGREGAR EL VIDEO DE INTRO */
+
+
+.showcase .tempBG
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+  filter: brightness(70%);
+}
+
+
+.tempBG {
+    background-image: url(/img/techworld.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.showcase .play {display: none;}
+
+
+
+/* QUITAR AL AGREGAR EL VIDEO DE INTRO */
